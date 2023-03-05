@@ -61,7 +61,7 @@ async function reportError() {
 
 exports.initScheduledJobs = () => {
   const scheduledJobFunction = CronJob.schedule("*/2 * * * *", () => {
-    console.log("---Running a task every minute");
+    console.log("---Running a task every 10 minute");
     rp(url)
       .then((res) => {
         //Read the file
