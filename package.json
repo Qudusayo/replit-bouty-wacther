@@ -1,5 +1,5 @@
 {
-  "name": "blockscanscrapper",
+  "name": "replit-bounties-tracker",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -15,6 +15,7 @@
     "css-select": "^5.1.0",
     "dotenv": "^16.0.3",
     "express": "^4.18.2",
+    "mongoose": "^7.0.0",
     "node-cron": "^3.0.0"
   }
 }

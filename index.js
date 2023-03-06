@@ -1,4 +1,6 @@
 const express = require("express");
+const mongoose = require("mongoose");
+
 // Path to the scheduled function(s)
 const scheduledFunctions = require("./scheduledFunctions");
 const app = express();
