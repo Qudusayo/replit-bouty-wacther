@@ -60,7 +60,7 @@ async function reportError() {
 }
 
 exports.initScheduledJobs = () => {
-  const scheduledJobFunction = CronJob.schedule("*/2 * * * *", () => {
+  const scheduledJobFunction = CronJob.schedule("*/10 * * * *", () => {
     console.log("---Running a task every 10 minute");
     rp(url)
       .then((res) => {
@@ -71,7 +71,7 @@ exports.initScheduledJobs = () => {
 
         // Compare the data and look for new bounties
         let newBounties = res.filter((e) => {
-          return !json.some((f) => f.title === e.title);
+          return !json.some((f) => f.link === e.link);
         });
 
         fs.writeFileSync(
